@@ -17,7 +17,6 @@ INNER JOIN customer
 -- - first_name         → The first name of the customer (from the customer table).
 
 
-
 -- 🔹 FULL OUTER JOIN
 -- Goal: Retrieve all customers and payments, including those without matching records in the other table.
 --       This query returns rows where there is no matching customer or no matching payment.
@@ -34,3 +33,27 @@ WHERE
 
 -- Output:
 -- Rows showing customers without payments and payments without customers.
+
+
+-- 🔹 LEFT JOIN
+-- Goal:
+-- Retrieve all films that are **not** present in the inventory.
+-- This helps identify which films are currently not available in any store.
+
+SELECT
+    film.film_id,
+    title,
+    inventory_id,
+    store_id
+FROM
+    film
+LEFT JOIN inventory
+    ON inventory.film_id = film.film_id
+WHERE
+    inventory.film_id IS NULL;
+
+-- Output columns:
+-- - film_id       → The unique ID of the film (from the film table).
+-- - title         → The title of the film.
+-- - inventory_id  → Will be NULL since we're filtering for films not in inventory.
+-- - store_id      → Will also be NULL, as there is no inventory record for these films.
