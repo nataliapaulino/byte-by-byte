@@ -23,4 +23,3 @@ Here you'll find a collection of exercises I am solving to improve my skills in 
 
 📌 Feel free to browse, suggest improvements, or ask questions!  
 You can use the *Discussions* tab for any questions, ideas, or feedback.  
-If you find this repository helpful, please consider giving it a ⭐.
