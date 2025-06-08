@@ -88,3 +88,42 @@ SELECT name, age
 FROM people
 WHERE age > 18 AND city = 'New York';
 ```
+
+<br>
+
+##  `ORDER BY`
+
+The `ORDER BY` clause is used to **sort rows** based on one or more column values, in either **ascending** (`ASC`) or **descending** (`DESC`) order.
+
+ `ORDER BY` must appear **after the `FROM` or `WHERE` clause**, and **before `LIMIT`** (if used).
+
+###  Syntax
+
+```sql
+SELECT column_1, column_2
+FROM table_name
+ORDER BY column_1 ASC; -- or DESC
+```
+
+- `ASC` → Sorts in ascending order
+
+- `DESC` → Sorts in descending order
+
+> If no keyword is specified, `ASC` is used by default
+
+<br>
+
+## `LIMIT`
+
+The `LIMIT` clause allows us to restrict the number of rows returned by a query.
+
+> `LIMIT` must be placed at the very end of the query.
+
+### Syntax
+
+```sql
+SELECT column_1, column_2
+FROM table_name
+ORDER BY column_1
+LIMIT number_of_rows;
+```
