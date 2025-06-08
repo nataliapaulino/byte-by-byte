@@ -1,4 +1,4 @@
--- 🔹 Aggregation Functions
+-- 🔹 Aggregate Functions
 -- Goal: Get the lowest replacement cost among all films
 SELECT MIN(replacement_cost)
 FROM film;
