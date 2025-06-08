@@ -89,6 +89,8 @@ FROM people
 WHERE age > 18 AND city = 'New York';
 ```
 
+[See SELECT examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/01_select.sql)
+
 <br>
 
 ##  `ORDER BY`
@@ -111,6 +113,8 @@ ORDER BY column_1 ASC; -- or DESC
 
 > If no keyword is specified, `ASC` is used by default
 
+[See ORDER BY examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/02_order_by.sql)
+
 <br>
 
 ## `LIMIT`
@@ -127,6 +131,8 @@ FROM table_name
 ORDER BY column_1
 LIMIT number_of_rows;
 ```
+ [See LIMIT examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/03_limit.sql)
+
 <br>
 
 ## `BETWEEN`
@@ -169,6 +175,8 @@ date BETWEEN '2007-01-01' AND '2007-02-01'
 
 > **NOTE:** Dates must be enclosed in single quotes because they are **timestamp** values, not numeric datatypes.
 
+[See BETWEEN examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/04_between.sql)
+
 <br>
 
 ## `IN`
@@ -194,6 +202,7 @@ Use `NOT IN` to return rows where the value is not one of the listed options:
 SELECT color FROM table
 WHERE color NOT IN ('black', 'white');
 ```
+[See IN examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/05_in.sql)
 
 <br>
 
@@ -242,6 +251,8 @@ This would match usernames like:
 - FlexMan
 - Blexton
 
+[See LIKE/ILIKE examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/06_like_ilike.sql)
+
 <br>
 
 ## Aggregate Functions
@@ -262,6 +273,8 @@ Aggregate functions perform calculations on multiple rows and return a single su
 SELECT ROUND(AVG(price), 2)
 FROM product;
 ```
+
+[See Aggregate Functions examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/07_aggregate_functions.sql)
 
 <br>
 
@@ -321,6 +334,8 @@ FROM finance_table
 GROUP BY company, division;
 ```
 
+[See GROUP BY examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/08_group_by.sql)
+
 <br>
 
 ## `HAVING`
@@ -336,5 +351,7 @@ FROM finance_table
 GROUP BY company
 HAVING SUM(sales) > 1000;
 ```
+
+[See HAVING examples ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/01_basics/09_having.sql)
 
 > **Note:** You can't use `WHERE` to filter aggregated results — use `HAVING` instead.
