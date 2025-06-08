@@ -241,3 +241,100 @@ This would match usernames like:
 - Alex
 - FlexMan
 - Blexton
+
+<br>
+
+## Aggregate Functions
+
+Aggregate functions perform calculations on multiple rows and return a single summary value.
+
+| Function | Description                     |
+|----------|---------------------------------|
+| `AVG()`    | Returns the average value       |
+| `COUNT()`  | Returns the number of values    |
+| `MAX()`    | Returns the maximum value       |
+| `MIN()`    | Returns the minimum value       |
+| `SUM()`    | Returns the total sum of values |
+
+> Since `AVG()` returns a floating-point number (e.g. 6.89564), you can use `ROUND()` to limit decimal precision:
+
+```sql
+SELECT ROUND(AVG(price), 2)
+FROM product;
+```
+
+<br>
+
+## `GROUP BY`
+
+The `GROUP BY` clause allows you to perform aggregation per category (or group). It must appear after a `FROM` or `WHERE` clause.
+
+### Example Tables
+
+#### 1. Original Table
+
+| category | value |
+|----------|-------|
+| A        | 10    |
+| B        | 20    |
+| A        | 15    |
+| B        | 5     |
+| A        | 25    |
+
+
+#### 2. Grouped View (Before Aggregation)
+
+| category | value |
+|----------|-------|
+| A        | 10    |
+| A        | 15    |
+| A        | 25    |
+| B        | 20    |
+| B        | 5     |
+
+#### 3. Aggregated Result (`SUM()`)
+
+| category | total_value |
+|----------|-------------|
+| A        | 50          |
+| B        | 25          |
+
+### Syntax
+
+```sql
+SELECT category_column, AGG(data_column)
+FROM table_name
+GROUP BY category_column;
+```
+
+> In the `SELECT` clause, every column must either:
+
+> - **Use an aggregate function (like `SUM()`, `AVG()`, etc.), or**
+
+> - **Be listed in the `GROUP BY` clause**
+
+#### Example:
+
+```sql
+SELECT company, division, SUM(sales)
+FROM finance_table
+GROUP BY company, division;
+```
+
+<br>
+
+## `HAVING`
+The `HAVING` clause is used to filter grouped results after aggregation.
+
+Unlike `WHERE`, which filters rows before aggregation, `HAVING` works after values have been grouped.
+
+#### Example:
+
+```sql
+SELECT company, SUM(sales)
+FROM finance_table
+GROUP BY company
+HAVING SUM(sales) > 1000;
+```
+
+> **Note:** You can't use `WHERE` to filter aggregated results — use `HAVING` instead.
