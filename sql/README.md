@@ -1,6 +1,53 @@
-#  SQL Reference Guide
+# SQL Reference Guide
 
-This repository is intended as a study guide for learning SQL. 
+![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-blue)
+![Last Commit](https://img.shields.io/github/last-commit/nataliapaulino/byte-by-byte?color=brightgreen)
+![Status](https://img.shields.io/badge/status-personal%20project-lightgrey)
+
+
+
+This repository is a structured and practical SQL study guide designed to learn, practice, and master SQL — from the basics to more advanced topics.
+
+It includes categorized examples with explanations for each topic, as well as **mini-assessment tests** at the end of certain sections.
+
+<br>
+
+📌 **Upcoming Additions:** More content will be added soon.
+
+You're welcome to explore the repository and follow along. 
+
+For feedback, suggestions, or questions, feel free to start a thread in the **Discussions** tab.
+
+---
+
+## Assessment Tests
+
+You'll find assessment tests in the following folders:
+
+- [02_advanced ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/02_advanced/06_assessment_test.sql)
+
+- [03_conditionals_and_procedures ➤](https://github.com/nataliapaulino/byte-by-byte/blob/main/sql/03_schema_and_data/07_assessment_test.sql)
+
+Files are named `assessment_test.sql` and are designed for self-evaluation.
+
+---
+
+## Table of Contents
+
+> The full topic breakdown is included below with syntax, explanations, and links to .sql files.
+
+- [`SELECT`](#select)
+- [`SELECT DISTINCT`](#select-distinct)
+- [`SELECT COUNT()`](#select-count)
+- [`SELECT` with `WHERE`](#select-with-where)
+- [`ORDER BY`](#order-by)
+- [`LIMIT`](#limit)
+- [`BETWEEN`](#between)
+- [`IN`](#in)
+- [`LIKE` and `ILIKE`](#like-and-ilike)
+- [Aggregate Functions](#aggregate-functions)
+- [`GROUP BY`](#group-by)
+- [`HAVING`](#having)
 
 ---
 
